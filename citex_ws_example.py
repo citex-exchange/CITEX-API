@@ -30,6 +30,6 @@ class test_ws_client:
 
 if __name__ == '__main__':
 
-    base_url = "wss://socket.citex.me/socket.io/?EIO=3&transport=websocket"
+    base_url = "wss://socket.citex.info/socket.io/?EIO=3&transport=websocket"
 
     test_ws_client(base_url).recv()
