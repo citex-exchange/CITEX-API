@@ -7,7 +7,8 @@
 ## 请求地址(base)：
 
 ```
-https://api.citex.vip/
+https://api.citex.info/
+https://api.citex.co.kr/
 ```
 
 ## 限流
