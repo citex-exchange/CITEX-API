@@ -6,7 +6,7 @@ import base64
 from urllib.parse import quote
 
 # Please enter the base url first
-base = 'https://apiproject.citex.me/'
+base = 'https://api.citex.info/'
 
 # And enter access key and secret key if want request private API
 akey = " "
