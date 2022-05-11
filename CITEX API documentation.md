@@ -7,7 +7,8 @@
 ## Requested address(base)：
 
 ```
-https://api.citex.vip/
+https://api.citex.info/
+https://api.citex.co.kr/
 ```
 
 # LIMITS
