@@ -979,6 +979,7 @@ https://apiproject.citex.me/v1/account/balance?AccessKeyId=e2xxxxxx-99xxxxxx-84x
 ##行情接口--Websocket接口
 说明：websocket接口支持订单簿（orderbook）、最新成交（lastdeal）的数据。
 
+采用开源库：https://github.com/socketio/socket.io
 
 基础url:
 ```
