@@ -1,3 +1,5 @@
+import ssl
+import certifi
 import websocket
 import time
 import gzip
@@ -8,8 +10,16 @@ import base64
 
 class test_ws_client:
     def __init__(self, base_url):
+        ssl_context = ssl.create_default_context()
+        ssl_context.load_verify_locations(certifi.where())
         self.url = base_url
-        self.ws = websocket.create_connection(self.url)
+        # ssl.SSLCertVerificationError
+        # On Mac OS X, the problem is resolved by clicking on the "Install Certificates.command" file located in the Python directory of the Applications folder.
+        # To run the command, open a new Finder window. Click on "Applications". Then click on the directory where Python is installed. For example, "Python 3.8". Finally, kick on the "Install Certificates.command file.
+        # All of this can be accomplished by executing the following command in the Terminal application:
+        # open "/Applications/Python 3.7/Install Certificates.command"
+        # NOTE: You need to be logged into the account that downloaded and installed Python 3.7.
+        self.ws = websocket.create_connection(self.url, ssl=ssl_context)
 
     def recv(self):
 
